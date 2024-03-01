@@ -23,8 +23,8 @@ function handleclick(){
             <h1 className="flex-row  align-middle text-center">Products</h1>
             <div className=" flex-col">
             {
-                response.map((item)=>
-                <div className=" border p-4 m-8 flex-row align-middle inline-block ">
+                response.map((item,id)=>
+                <div key={id} className=" border p-4 m-8 flex-row align-middle inline-block ">
                     <Link href={`./products/${item.id}/`} className=" text-xs"> <img className=" object-contain  h-20 w-40  block" src={item.thumbnail}></img>
                     {item.id} : {item.title}
                    
