@@ -1,4 +1,5 @@
 import ProductGallery from "./ProductGallery";
+import Link from "next/link";
 function Productpage(props) {
     const p=props.data;
     console.log(p)
@@ -16,8 +17,8 @@ function Productpage(props) {
         
         <br/>
         <p>description-{p.description}</p>
-
-      
+        <br />
+        <Link className="border" href="/products">Back</Link>
       </div>
         
     </div>

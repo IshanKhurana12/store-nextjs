@@ -1,4 +1,5 @@
 import Productpage from "@/Components/productpage";
+import Link from "next/link";
 async function getdata(id){
     const res=await fetch(`https://dummyjson.com/products/${id}`);
     const data=await res.json();
@@ -15,6 +16,7 @@ async function Productid({params}) {
   return (
     <div>
       <Productpage data={data}/>
+     
     </div>
   )
 }
